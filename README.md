@@ -21,4 +21,11 @@ sudo apt install apt-transport-https
 sudo apt update
 sudo apt install code # or code-insiders
 ```
-3.  ****
+
+3.  **Install C++ on VS CODE**
+
+- Launch VS Code Quick Open (Ctrl+P), paste the following command, and press enter.
+
+```
+ext install ms-vscode.cpptools-extension-pack
+```
