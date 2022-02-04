@@ -29,3 +29,18 @@ sudo apt install code # or code-insiders
 ```
 ext install ms-vscode.cpptools-extension-pack
 ```
+
+4.  **Install Code Runner on VS CODE**
+
+- Launch VS Code Quick Open (Ctrl+P), paste the following command, and press enter.
+
+```
+ext install formulahendry.code-runner
+```
+
+5.  **Change Settings of Code Runner**
+- Open `Settings` in vscode (ctrl + comma)
+- Search on `Run Code Configuration`
+  - Check on `Clear Previous Output`
+  - Check on `Run In Terminal`
+  - Check on `Save All Files Before Run`
