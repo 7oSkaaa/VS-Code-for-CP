@@ -41,6 +41,6 @@ ext install formulahendry.code-runner
 5.  **Change Settings of Code Runner**
 - Open `Settings` in vscode (ctrl + comma)
 - Search on `Run Code Configuration`
-  - Check on `Clear Previous Output`
-  - Check on `Run In Terminal`
-  - Check on `Save All Files Before Run`
+  - Make [x] on `Clear Previous Output`
+  - Make [x] on `Run In Terminal`
+  - Make [x] on `Save All Files Before Run`
