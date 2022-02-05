@@ -30,7 +30,15 @@ sudo apt install code # or code-insiders
 ext install ms-vscode.cpptools-extension-pack
 ```
 
-4.  **Install Code Runner on VS CODE**
+4.  **Install C/C++ Compile Run**
+
+- Launch VS Code Quick Open (Ctrl+P), paste the following command, and press enter.
+
+```
+ext install danielpinto8zz6.c-cpp-compile-run
+```
+
+5.  **Install Code Runner on VS CODE**
 
 - Launch VS Code Quick Open (Ctrl+P), paste the following command, and press enter.
 
@@ -38,7 +46,7 @@ ext install ms-vscode.cpptools-extension-pack
 ext install formulahendry.code-runner
 ```
 
-5.  **Change Settings of Code Runner**
+6.  **Change Settings of Code Runner**
 
 - Open `Settings` in vscode (ctrl + comma)
 - Search on `Run Code Configuration`
@@ -47,7 +55,7 @@ ext install formulahendry.code-runner
   - [x] on `Save All Files Before Run`
 - Don't Close `Settings` because we will use it in the next step
 
-6.  **Change Executor Map of Code Runner**
+7.  **Change Executor Map of Code Runner**
 -   Click on `Edit in settings json` at `Executor Map By File Extension`
 -   at `code-runner.executorMap` edit in cpp label
 -   choose one flag from these and put it in cpp label:
@@ -58,7 +66,7 @@ ext install formulahendry.code-runner
     - this flag for execute the file with cp flags but less debuger than the above one
       - `"cd $dir && g++ -std=c++17 -Wshadow -Wall -o "%e" "%f" -O2 -Wno-unused-result $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"` 
 
-6.  **Use Files instead of terminal**
+8.  **Use Files instead of terminal**
 - We will use freopen and files txt to take input and output from use instead of terminal
 - First we should put this function in our code
 ```C++
@@ -70,3 +78,43 @@ void Fast_IO(){
 }
 ```
 - Create text file and name it `input.txt`
+
+9.  **Split Screen to make the view better for you
+- The image in below will show you the view after splitting it.
+  - ![Screenshot from 2022-02-05 21-00-34](https://user-images.githubusercontent.com/63050133/152655170-89857fb7-4f8a-4425-9f54-55503d8d4b62.png)
+
+
+**Enjoy now with you CP Enviroment**
+
+
+----
+
+<br>
+<br>
+<br>
+
+## Optional things to do
+
+**Install Atom One Dark Theme**
+
+- Launch VS Code Quick Open (Ctrl+P), paste the following command, and press enter.
+
+```
+ext install akamud.vscode-theme-onedark
+```
+
+**Install Bracket Pair Colorizer**
+
+- Launch VS Code Quick Open (Ctrl+P), paste the following command, and press enter.
+
+```
+ext install CoenraadS.bracket-pair-colorizer
+```
+
+**Install Easy icon theme**
+
+- Launch VS Code Quick Open (Ctrl+P), paste the following command, and press enter.
+
+```
+ext install jamesmaj.easy-icons
+```
