@@ -89,9 +89,7 @@ void Fast_IO(){
 
 ----
 
-<br>
-<br>
-<br>
+<br><br><br>
 
 ## Optional things to do
 
