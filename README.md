@@ -118,3 +118,7 @@ ext install CoenraadS.bracket-pair-colorizer
 ```
 ext install jamesmaj.easy-icons
 ```
+
+<br><br><br>
+
+### You can use my template for competitve programming with cpp from [here](https://github.com/7oSkaaa/VS-Code-for-CP/blob/main/Template.cpp)
