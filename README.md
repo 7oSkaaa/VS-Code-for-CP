@@ -81,7 +81,7 @@ void Fast_IO(){
 ```
 - Create text file and name it `input.txt`
 
-9.  **Split Screen to make the view better for you
+9.  **Split Screen to make the view better for you**
 - The image in below will show you the view after splitting it.
   - ![Screenshot from 2022-02-05 21-00-34](https://user-images.githubusercontent.com/63050133/152655170-89857fb7-4f8a-4425-9f54-55503d8d4b62.png)
 
