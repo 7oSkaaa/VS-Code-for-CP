@@ -120,3 +120,234 @@ ext install jamesmaj.easy-icons
 <br><br><br>
 
 ### You can use my template for competitve programming with cpp from [here](https://github.com/7oSkaaa/VS-Code-for-CP/blob/main/Template.cpp)
+
+<br><br><br>
+
+<hr>
+
+### This is my settings.json file if you want to use it
+
+```json
+{
+    "workbench.colorTheme": "One Dark",
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb",
+        "*.html": "default"
+    },
+    "files.autoSave": "onFocusChange",
+    "files.associations": {
+        "random": "cpp",
+        "*.tcc": "cpp",
+        "deque": "cpp",
+        "list": "cpp",
+        "string": "cpp",
+        "unordered_map": "cpp",
+        "unordered_set": "cpp",
+        "vector": "cpp"
+    },
+    "editor.mouseWheelZoom": true,
+    "files.autoGuessEncoding": true,
+    "debug.terminal.clearBeforeReusing": true,
+    "task.problemMatchers.neverPrompt": false,
+    "gnuGlobal.debugMode": "Enabled",
+    "gnuGlobal.autoUpdate": "Enabled",
+    "c-cpp-compile-run.run-in-external-terminal": true,
+    "code-runner.clearPreviousOutput": true,
+    "code-runner.runInTerminal": true,
+    "code-runner.saveAllFilesBeforeRun": true,
+    "code-runner.saveFileBeforeRun": true,
+    "code-runner.languageIdToFileExtensionMap": {
+        "bat": ".bat",
+        "powershell": ".ps1",
+        "typescript": ".ts"
+    },
+    "tasks": [
+        {
+            "label": "build main.cpp",
+            "type": "shell",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-g",
+                "-Wall",
+                "-Wextra",
+                "-Wshadow",
+                "-Wformat=2",
+                "-Wfloat-equal",
+                "-o",
+                "main",
+                "main.cpp",
+                "-DAKP"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ],
+    "diffEditor.wordWrap": "off",
+    "editor.codeLens": false,
+    "editor.accessibilitySupport": "off",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "python.autoComplete.addBrackets": true,
+    "python.globalModuleInstallation": true,
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "name": "One Dark italic",
+                "scope": [
+                    "comment",
+                    "entity.other.attribute-name",
+                    "keyword",
+                    "markup.underline.link",
+                    "storage.modifier",
+                    "storage.type",
+                    "string.url",
+                    "variable.language.super",
+                    "variable.language.this"
+                ],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "name": "One Dark italic reset",
+                "scope": [
+                    "keyword.operator",
+                    "keyword.other.type",
+                    "storage.modifier.import",
+                    "storage.modifier.package",
+                    "storage.type.built-in",
+                    "storage.type.function.arrow",
+                    "storage.type.generic",
+                    "storage.type.java",
+                    "storage.type.primitive"
+                ],
+                "settings": {
+                    "fontStyle": ""
+                }
+            }
+        ]
+    },
+    "code-runner.executorMap": {
+        "javascript": "node",
+        "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+        "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "cpp": "cd $dir && g++ -std=c++17 -Wshadow -Wall -o -g -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG $fileName -o $fileNameWithoutExt && timeout -k 0 1s $dir$fileNameWithoutExt",
+        "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "php": "php",
+        "python": "python3 -u",
+        "perl": "perl",
+        "perl6": "perl6",
+        "ruby": "ruby",
+        "go": "go run",
+        "lua": "lua",
+        "groovy": "groovy",
+        "powershell": "powershell -ExecutionPolicy ByPass -File",
+        "bat": "cmd /c",
+        "shellscript": "bash",
+        "fsharp": "fsi",
+        "csharp": "scriptcs",
+        "vbscript": "cscript //Nologo",
+        "typescript": "ts-node",
+        "coffeescript": "coffee",
+        "scala": "scala",
+        "swift": "swift",
+        "julia": "julia",
+        "crystal": "crystal",
+        "ocaml": "ocaml",
+        "r": "Rscript",
+        "applescript": "osascript",
+        "clojure": "lein exec",
+        "haxe": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
+        "rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
+        "racket": "racket",
+        "scheme": "csi -script",
+        "ahk": "autohotkey",
+        "autoit": "autoit3",
+        "dart": "dart",
+        "pascal": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+        "d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
+        "haskell": "runhaskell",
+        "nim": "nim compile --verbosity:0 --hints:off --run",
+        "lisp": "sbcl --script",
+        "kit": "kitc --run",
+        "v": "v run",
+        "sass": "sass --style expanded",
+        "scss": "scss --style expanded",
+        "less": "cd $dir && lessc $fileName $fileNameWithoutExt.css",
+        "FortranFreeForm": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "fortran-modern": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "fortran_fixed-form": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "fortran": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
+      },
+    "editor.renderWhitespace": "none",
+    "editor.minimap.enabled": false,
+    "breadcrumbs.enabled": false,
+    "editor.wordWrap": "on",
+    "editor.inlineHints.enabled": false,
+    "editor.linkedEditing": true,
+    "scm.alwaysShowActions": true,
+    "C_Cpp.vcFormat.indent.preserveWithinParentheses": true,
+    "C_Cpp.vcFormat.newLine.beforeWhileInDoWhile": true,
+    "C_Cpp.vcFormat.newLine.closeBraceSameLine.emptyFunction": true,
+    "C_Cpp.vcFormat.newLine.closeBraceSameLine.emptyType": true,
+    "C_Cpp.vcFormat.newLine.scopeBracesOnSeparateLines": true,
+    "C_Cpp.vcFormat.newLine.beforeOpenBrace.type": "newLine",
+    "C_Cpp.vcFormat.indent.withinParentheses": "alignToParenthesis",
+    "C_Cpp.vcFormat.newLine.beforeOpenBrace.block": "newLine",
+    "C_Cpp.vcFormat.newLine.beforeOpenBrace.function": "newLine",
+    "C_Cpp.vcFormat.newLine.beforeOpenBrace.lambda": "newLine",
+    "C_Cpp.vcFormat.newLine.beforeOpenBrace.namespace": "newLine",
+    "C_Cpp.vcFormat.wrap.preserveBlocks": "allOneLineScopes",
+    "C_Cpp.vcFormat.indent.braces": true,
+    "C_Cpp.vcFormat.indent.caseContentsWhenBlock": true,
+    "C_Cpp.vcFormat.indent.caseLabels": true,
+    "C_Cpp.vcFormat.indent.preserveComments": true,
+    "[cpp]": {
+        "editor.defaultFormatter": "xoanis.clion-formatter"
+    },
+    "editor.fontFamily": "'Fira Code', 'fedora', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "terminal.integrated.fontFamily": "monospace",
+    "editor.fontLigatures": true,
+    "editor.codeLensFontFamily": "Fira Code",
+    "editor.defaultFormatter": "danielpinto8zz6.c-cpp-compile-run",
+    "C_Cpp.default.cppStandard": "c++20",
+    "C_Cpp.default.compileCommands": "g++ -std=c++17 -Wshadow -Wall -o \"%e\" \"%f\" -g -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG",
+    "C_Cpp.default.cStandard": "c17",
+    "explorer.confirmDelete": false,
+    "shareCode.pastebin.username": "7oSkaaa",
+    "python.analysis.completeFunctionParens": true,
+    "python.defaultInterpreterPath": "python3",
+    "code-runner.temporaryFileName": "temp_file",
+    "python.pythonPath": "python3",
+    "command": "python3",
+    "jupyter.askForKernelRestart": false,
+    "workbench.settings.openDefaultSettings": true,
+    "markdown-preview-enhanced.previewTheme": "one-dark.css",
+    "vsicons.dontShowNewVersionMessage": true,
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "scm.inputFontFamily": "Fira Code",
+    "bracketPairColorizer.depreciation-notice": false,
+    "[django-html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.unicodeHighlight.nonBasicASCII": false,
+    "C_Cpp.autocompleteAddParentheses": true,
+    "terminal.integrated.copyOnSelection": true,
+    "files.participants.timeout": 1500,
+    "explorer.confirmDragAndDrop": false,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "workbench.editor.enablePreview": false,
+    "git.autofetch": true,
+    "gitlens.advanced.messages": {
+        "suppressGitMissingWarning": true
+    },
+}
+```
