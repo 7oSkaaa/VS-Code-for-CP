@@ -2,6 +2,8 @@
 
 For competitive programming, I use Linux dual booted alongside Windows. My favorite IDE is VS Code and it's perfect for short codes in CP.
 
+### [Tutorial Video](https://www.youtube.com/watch?v=8UvUyVjpWdU)
+
 1.  **Install C++**
 
 ```
