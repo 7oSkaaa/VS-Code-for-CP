@@ -117,6 +117,13 @@ ext install CoenraadS.bracket-pair-colorizer
 ext install jamesmaj.easy-icons
 ```
 
+
+**Make Your Snippet**
+
+- You can go to [this site](https://snippet-generator.app/) and make a snippet for you
+
+- After that you can copy the snippet and insert it in your vscode to call it in anytime
+
 <br><br><br>
 
 ### You can use my template for competitve programming with cpp from [here](https://github.com/7oSkaaa/VS-Code-for-CP/blob/main/Template.cpp)
