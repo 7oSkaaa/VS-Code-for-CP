@@ -65,6 +65,8 @@ ext install formulahendry.code-runner
       - `"cd $dir && g++ -std=c++17 -Wshadow -Wall -o -g -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"` 
     - this flag for execute the file with cp flags but less debuger than the above one
       - `"cd $dir && g++ -std=c++17 -Wshadow -Wall -o "%e" "%f" -O2 -Wno-unused-result $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"` 
+    - this flag for Windows
+      - `"cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"` 
 
 8.  **Use Files instead of terminal**
 - We will use freopen and files txt to take input and output from use instead of terminal
