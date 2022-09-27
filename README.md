@@ -65,15 +65,19 @@ ext install formulahendry.code-runner
 -   Click on `Edit in settings json` at `Executor Map By File Extension`
 -   at `code-runner.executorMap` edit in cpp label
 -   choose one flag from these and put it in cpp label:
-    - this flag for execute the file with cp flags and make the code terminate after one second
-      - `"cd $dir && g++ -std=c++17 -Wshadow -Wall -o -g -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG $fileName -o $fileNameWithoutExt && timeout -k 0 1s $dir$fileNameWithoutExt"`
-    - this flag for execute the file with cp flags only
-      - `"cd $dir && g++ -std=c++17 -Wshadow -Wall -o -g -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"` 
-    - this flag for execute the file with cp flags but less debuger than the above one
-      - `"cd $dir && g++ -std=c++17 -Wshadow -Wall -o "%e" "%f" -O2 -Wno-unused-result $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"` 
+    - this command for execute the file with cp flags and make the code terminate after one second
+      - `"cd $dir && g++ -std=c++2a -Wshadow -Wall -o -g -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG $fileName -o $fileNameWithoutExt && timeout -k 0 1s $dir$fileNameWithoutExt"`
+    - this command for execute the file with cp flags only
+      - `"cd $dir && g++ -std=c++2a -Wshadow -Wall -o -g -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"` 
+    - this command for execute the file with cp flags but less debuger than the above one
+      - `"cd $dir && g++ -std=c++2a -Wshadow -Wall -o "%e" "%f" -O2 -Wno-unused-result $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"` 
     - this flag for Windows
       - `"cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"` 
-
+    - this command for input and output from files with flags
+      - `"cd $dir && g++ -std=c++2a -Wshadow -Wall -o -g -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG $fileName -o $fileNameWithoutExt && timeout -k 0 1s $dir$fileNameWithoutExt < input.txt > output.txt && rm $dir$fileNameWithoutExt"` 
+    - this command for input and output from files without flags
+      - `"cd $dir && g++ -std=c++2a $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt < input.txt > output.txt && rm $dir$fileNameWithoutExt"` 
+      
 8.  **Use Files instead of terminal**
 - We will use freopen and files txt to take input and output from use instead of terminal
 - First we should put this function in our code
@@ -140,7 +144,21 @@ ext install jamesmaj.easy-icons
 
 <hr>
 
-### This is my settings.json file if you want to use it
+You can make two run commands with shortcut
+
+- Run with flags
+- Run without flags
+
+```
+- Go to keyboard Shortcuts or `Ctrl + k + s`
+- search on code-runner
+- make shortcut for `code-runner.run` for Run with flags
+- make shortcut for `code-runner.runCustomCommand` for Run without flags
+```
+
+<hr>
+
+### This is settings.json file if you want to add it's content to your settings.json file
 
 ```json
 {
